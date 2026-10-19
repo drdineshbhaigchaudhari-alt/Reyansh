@@ -8,6 +8,14 @@ import contactRouter from './routes/contact.js';
 import { verifyMail } from './mailer.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Load server/.env when present (local runs). On Hostinger, set the same keys under
+// the app's Environment variables in hPanel instead.
+try {
+  process.loadEnvFile(path.join(__dirname, '.env'));
+} catch {
+  // no .env file: rely on the host's environment variables
+}
 const app = express();
 const PORT = process.env.PORT || 5000;
 

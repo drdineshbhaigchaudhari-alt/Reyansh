@@ -1,19 +1,26 @@
 import nodemailer from 'nodemailer';
 
-const env = process.env;
-const enabled = Boolean(env.SMTP_HOST && env.SMTP_USER && env.SMTP_PASS);
-
-const transporter = enabled
-  ? nodemailer.createTransport({
-      host: env.SMTP_HOST,
-      port: Number(env.SMTP_PORT || 465),
-      secure: (env.SMTP_SECURE ?? 'true') === 'true',
-      auth: { user: env.SMTP_USER, pass: env.SMTP_PASS },
-    })
-  : null;
-
-const FROM = env.MAIL_FROM || env.SMTP_USER;
-const NOTIFY_TO = env.NOTIFY_TO || env.SMTP_USER;
+// Settings are read on first use (not at import time) so .env loading in index.js applies.
+let cached;
+function config() {
+  if (cached) return cached;
+  const env = process.env;
+  const enabled = Boolean(env.SMTP_HOST && env.SMTP_USER && env.SMTP_PASS);
+  cached = {
+    env,
+    from: env.MAIL_FROM || env.SMTP_USER,
+    notifyTo: env.NOTIFY_TO || env.SMTP_USER,
+    transporter: enabled
+      ? nodemailer.createTransport({
+          host: env.SMTP_HOST,
+          port: Number(env.SMTP_PORT || 465),
+          secure: (env.SMTP_SECURE ?? 'true') === 'true',
+          auth: { user: env.SMTP_USER, pass: env.SMTP_PASS },
+        })
+      : null,
+  };
+  return cached;
+}
 
 const esc = (v) =>
   String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -35,12 +42,13 @@ function table(rows) {
 }
 
 async function send(msg) {
+  const { transporter, from } = config();
   if (!transporter) {
     console.warn('[mail] SMTP not configured; skipping email:', msg.subject);
     return;
   }
   try {
-    await transporter.sendMail({ from: FROM, ...msg });
+    await transporter.sendMail({ from, ...msg });
   } catch (err) {
     // Never fail a booking because email failed; the record is already saved.
     console.error('[mail] send failed:', err.message);
@@ -61,7 +69,7 @@ export function notifyAppointment(row, reference) {
   ];
   const jobs = [
     send({
-      to: NOTIFY_TO,
+      to: config().notifyTo,
       replyTo: row.email || undefined,
       subject: `New appointment request ${reference}: ${row.name} (${row.service})`,
       html: layout('New appointment request', table(rows)),
@@ -87,7 +95,7 @@ export function notifyAppointment(row, reference) {
 export function notifyContact(row) {
   return Promise.all([
     send({
-      to: NOTIFY_TO,
+      to: config().notifyTo,
       replyTo: row.email,
       subject: `Website enquiry: ${row.subject}`,
       html: layout('New website enquiry', table([['Name', row.name], ['Email', row.email], ['Phone', row.phone], ['Subject', row.subject], ['Message', row.message]])),
@@ -101,6 +109,7 @@ export function notifyContact(row) {
 }
 
 export async function verifyMail() {
+  const { transporter, env } = config();
   if (!transporter) return 'SMTP not configured';
   await transporter.verify();
   return `SMTP ready (${env.SMTP_USER} via ${env.SMTP_HOST})`;
