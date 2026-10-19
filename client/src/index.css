@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-ivory text-slate-700 font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display text-navy-800; }
+  :focus-visible { @apply outline-none ring-2 ring-crimson-500 ring-offset-2 ring-offset-white; }
+  ::selection { @apply bg-navy-200 text-navy-900; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section { @apply py-20 md:py-28; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-crimson-600; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 disabled:opacity-60; }
+  .btn-primary { @apply btn bg-navy-700 text-white shadow-soft hover:bg-navy-800; }
+  .btn-crimson { @apply btn bg-crimson-500 text-white hover:bg-crimson-600; }
+  .btn-ghost { @apply btn border border-navy-700/20 bg-white/70 text-navy-800 backdrop-blur hover:border-navy-700/40 hover:bg-white; }
+  .btn-light { @apply btn bg-white text-navy-800 hover:bg-ivory; }
+  .card { @apply rounded-3xl bg-white p-7 shadow-card ring-1 ring-navy-900/5; }
+  .field { @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition focus:border-navy-500 focus:outline-none focus:ring-4 focus:ring-navy-100; }
+  .label { @apply mb-1.5 block text-sm font-medium text-slate-700; }
+  .prose-care p { @apply mb-4 leading-relaxed; }
+  .prose-care h3 { @apply mb-3 mt-8 text-2xl; }
+  .prose-care ul { @apply mb-4 list-disc space-y-1.5 pl-5; }
+}
