@@ -13,12 +13,6 @@ All other photos come from [Pexels](https://www.pexels.com) under the Pexels Lic
 | lab-sikh-doctor.jpg | https://www.pexels.com/photo/14797915/ |
 | lab-analyzer.jpg | https://www.pexels.com/photo/18689301/ |
 | lab-research.jpg | https://www.pexels.com/photo/9408640/ |
-| dr-1.jpg | https://www.pexels.com/photo/14797918/ |
-| dr-2.jpg | https://www.pexels.com/photo/36665076/ |
-| dr-3.jpg | https://www.pexels.com/photo/27298085/ |
-| dr-4.jpg | https://www.pexels.com/photo/5738735/ |
-| dr-5.jpg | https://www.pexels.com/photo/6762866/ |
-| dr-6.jpg | https://www.pexels.com/photo/10695742/ |
 | nurse.jpg | https://www.pexels.com/photo/40268205/ |
 | mother-child.jpg | https://www.pexels.com/photo/12985803/ |
 | family-home.jpg | https://www.pexels.com/photo/9346147/ |
@@ -45,3 +39,16 @@ All other photos come from [Pexels](https://www.pexels.com) under the Pexels Lic
 | ahmedabad-bridge.jpg | https://www.pexels.com/photo/17647105/ |
 
 > The people shown are stock models, not real patients or staff. Apart from Dr. Keyuriben, the doctor names on the site are placeholders. Replace them with real staff photos before launch.
+
+## Doctor portraits (placeholders)
+
+| File | Source |
+|---|---|
+| dr-1.jpg | Unsplash, vaibhav vivian: https://unsplash.com/photos/3HIroMoyre8 |
+| dr-2.jpg | Pexels: https://www.pexels.com/photo/32428850/ |
+| dr-3.jpg | Unsplash, mohamad azaam: https://unsplash.com/photos/1O8CJy1A7Wo |
+| dr-4.jpg | Unsplash, Fotos: https://unsplash.com/photos/H9lg5Noj660 |
+| dr-5.jpg | Pexels: https://www.pexels.com/photo/19438561/ |
+| dr-6.jpg | Unsplash, Fotos: https://unsplash.com/photos/Kr-B0SOgD_4 |
+
+Unsplash photos are used under the Unsplash License (free for commercial use).

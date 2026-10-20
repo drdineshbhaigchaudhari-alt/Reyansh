@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 /* ------------------------------------------------------------------
- * Hospital details. Phone numbers and email are DUMMY placeholders.
+ * Hospital details. Phone numbers are DUMMY placeholders; emails are the hospital's real addresses.
  * ---------------------------------------------------------------- */
 export const site = {
   name: 'Reyansh Prime Multispecialty Hospital',
@@ -26,7 +26,13 @@ export const site = {
   pepHelpline: '+91 50250 12003',
   pepHref: 'tel:+915025012003',
   whatsapp: '915025012003',
-  email: 'care@reyanshprimehospital.com',
+  email: 'infohospital@reyanshmultispeciality.com',
+  emails: [
+    { label: 'General enquiries', address: 'infohospital@reyanshmultispeciality.com' },
+    { label: 'Hospital office', address: 'rpmh@reyanshmultispeciality.com' },
+    { label: '24×7 Emergency', address: 'emergency24@reyanshmultispeciality.com' },
+    { label: 'Careers & HR', address: 'hr@reyanshmultispeciality.com' },
+  ],
   hours: [
     { day: 'OPD: Monday – Saturday', time: '9:00 AM – 8:00 PM' },
     { day: 'OPD: Sunday', time: '10:00 AM – 1:00 PM' },
@@ -420,14 +426,14 @@ export const doctors = [
     link: '/specialities/psychiatry',
   },
   {
-    name: 'Dr. Harpreet Singh Gill',
+    name: 'Dr. Harsh Vyas',
     role: 'Medical Director & Senior Physician (HIV Medicine)',
     quals: 'MD (Medicine), Fellowship in HIV Medicine',
     exp: '22+ years',
     image: '/images/dr-1.jpg',
     focus: ['HIV & ART', 'Infectious diseases', 'Critical care'],
     opd: 'Mon – Sat, 10 AM – 2 PM',
-    langs: 'English, Hindi, Gujarati, Punjabi',
+    langs: 'English, Hindi, Gujarati',
   },
   {
     name: 'Dr. Meenakshi Patel',

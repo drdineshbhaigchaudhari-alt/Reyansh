@@ -44,7 +44,14 @@ export default function Footer() {
           <ul className="mt-5 space-y-4 text-sm">
             <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />{site.address}</li>
             <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" /><a href={site.phoneHref} className="hover:text-white">{site.phone}</a></li>
-            <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" /><a href={`mailto:${site.email}`} className="break-all text-[13px] hover:text-white">{site.email}</a></li>
+            <li className="flex gap-3">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
+              <span className="space-y-1">
+                {site.emails.map((e) => (
+                  <a key={e.address} href={`mailto:${e.address}`} className="block text-[13px] hover:text-white">{e.address.split('@')[0]}<wbr />@{e.address.split('@')[1]}</a>
+                ))}
+              </span>
+            </li>
             <li className="flex gap-3"><Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />OPD Mon–Sat 9 AM – 8 PM · Emergency 24×7</li>
           </ul>
         </div>

@@ -70,6 +70,17 @@ export default function Contact() {
               <p className="mt-3 text-sm text-slate-500">Parking available for patients and visitors. Ambulance entrance is open 24×7.</p>
               <a href={site.mapLink} target="_blank" rel="noopener noreferrer" className="btn-ghost mt-5"><Navigation className="h-4 w-4" /> Get directions</a>
             </Reveal>
+            <Reveal className="rounded-3xl bg-white p-8 ring-1 ring-navy-900/5">
+              <h3 className="flex items-center gap-2 text-xl font-semibold"><Mail className="h-5 w-5 text-crimson-500" /> Email us</h3>
+              <ul className="mt-4 divide-y divide-slate-100">
+                {site.emails.map((e) => (
+                  <li key={e.address} className="py-3">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{e.label}</p>
+                    <a href={`mailto:${e.address}`} className="break-all text-sm font-medium text-navy-700 hover:text-crimson-500">{e.address}</a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
         </div>
       </section>
