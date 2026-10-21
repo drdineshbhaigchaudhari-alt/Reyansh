@@ -44,11 +44,9 @@ All other photos come from [Pexels](https://www.pexels.com) under the Pexels Lic
 
 | File | Source |
 |---|---|
-| dr-1.jpg | Unsplash, vaibhav vivian: https://unsplash.com/photos/3HIroMoyre8 |
-| dr-2.jpg | Pexels: https://www.pexels.com/photo/32428850/ |
-| dr-3.jpg | Unsplash, mohamad azaam: https://unsplash.com/photos/1O8CJy1A7Wo |
-| dr-4.jpg | Unsplash, Fotos: https://unsplash.com/photos/H9lg5Noj660 |
-| dr-5.jpg | Pexels: https://www.pexels.com/photo/19438561/ |
-| dr-6.jpg | Unsplash, Fotos: https://unsplash.com/photos/Kr-B0SOgD_4 |
-
-Unsplash photos are used under the Unsplash License (free for commercial use).
+| dr-1.jpg | Supplied by the hospital team |
+| dr-2.jpg | Supplied by the hospital team |
+| dr-3.jpg | Supplied by the hospital team |
+| dr-4.jpg | Supplied by the hospital team |
+| dr-5.jpg | Supplied by the hospital team |
+| dr-6.jpg | Supplied by the hospital team |

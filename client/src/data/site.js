@@ -430,7 +430,7 @@ export const doctors = [
     role: 'Medical Director & Senior Physician (HIV Medicine)',
     quals: 'MD (Medicine), Fellowship in HIV Medicine',
     exp: '22+ years',
-    image: '/images/dr-1.jpg',
+    image: '/images/dr-1.jpg?v=3',
     focus: ['HIV & ART', 'Infectious diseases', 'Critical care'],
     opd: 'Mon – Sat, 10 AM – 2 PM',
     langs: 'English, Hindi, Gujarati',
@@ -440,7 +440,7 @@ export const doctors = [
     role: 'Consultant – Obstetrics, Gynaecology & IVF',
     quals: 'MS (Obstetrics & Gynaecology), Fellowship in Reproductive Medicine',
     exp: '16+ years',
-    image: '/images/dr-2.jpg',
+    image: '/images/dr-2.jpg?v=3',
     focus: ['High-risk pregnancy', 'IVF & IUI', 'Laparoscopic gynaecology'],
     opd: 'Mon – Sat, 11 AM – 5 PM',
     langs: 'English, Hindi, Gujarati',
@@ -450,7 +450,7 @@ export const doctors = [
     role: 'Consultant – Orthopaedics & Joint Replacement',
     quals: 'MS (Orthopaedics), Fellowship in Arthroplasty',
     exp: '14+ years',
-    image: '/images/dr-3.jpg',
+    image: '/images/dr-3.jpg?v=3',
     focus: ['Knee replacement', 'Hip replacement', 'Sports injuries'],
     opd: 'Mon – Sat, 5 PM – 8 PM',
     langs: 'English, Hindi, Gujarati',
@@ -460,7 +460,7 @@ export const doctors = [
     role: 'Head – Pathology',
     quals: 'MD (Pathology)',
     exp: '12+ years',
-    image: '/images/dr-4.jpg',
+    image: '/images/dr-4.jpg?v=4',
     focus: ['Clinical pathology', 'Haematology', 'Quality assurance'],
     opd: 'Lab consultations by appointment',
     langs: 'English, Hindi, Gujarati',
@@ -470,7 +470,7 @@ export const doctors = [
     role: 'Consultant – Spine Surgery & Pain Management',
     quals: 'MS (Orthopaedics), Fellowship in Spine Surgery',
     exp: '12+ years',
-    image: '/images/dr-5.jpg',
+    image: '/images/dr-5.jpg?v=4',
     focus: ['Slipped disc', 'Minimally invasive spine surgery', 'Chronic pain'],
     opd: 'Tue – Sun, 4 PM – 8 PM',
     langs: 'English, Hindi, Gujarati',
@@ -480,12 +480,28 @@ export const doctors = [
     role: 'Consultant – Internal Medicine',
     quals: 'MD (General Medicine)',
     exp: '9+ years',
-    image: '/images/dr-6.jpg',
+    image: '/images/dr-6.jpg?v=3',
     focus: ['Diabetes & hypertension', 'Infections', 'Preventive health'],
     opd: 'Mon – Sat, 9 AM – 1 PM',
     langs: 'English, Hindi, Gujarati',
   },
 ];
+
+/* Featured specialist (details supplied by the hospital) */
+export const featuredDoctor = {
+  name: 'Dr. Vishnu Dutt',
+  role: 'Rheumatologist',
+  quals: 'MBBS, MD (General Medicine), DNB (Rheumatology)',
+  exp: '24 years of experience',
+  specialistExp: '15 years as a specialist',
+  rating: '98% patient satisfaction (1,442 patients)',
+  image: '/images/dr-vishnu-dutt.jpg',
+  bio: [
+    'Dr. Vishnu Dutt is one of very few qualified rheumatologists in Gujarat, and the first in the state to earn a DNB in Rheumatology.',
+    'His aim is to build a state-of-the-art centre for arthritis care in Gujarat. He is also an Editorial Board Member of the Journal of Surgical Oncology.',
+  ],
+  highlights: ['First DNB Rheumatologist of Gujarat', 'Medical registration verified', 'Arthritis & joint care', 'Editorial Board Member, Journal of Surgical Oncology'],
+};
 
 /* ------------------------------------------------------------------ */
 export const testimonials = [

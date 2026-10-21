@@ -9,6 +9,7 @@ import StatsBand from '../components/StatsBand';
 import Testimonials from '../components/Testimonials';
 import FAQAccordion from '../components/FAQAccordion';
 import CTASection from '../components/CTASection';
+import FeaturedDoctor from '../components/FeaturedDoctor';
 import { AppointmentForm } from '../components/Forms';
 import usePageTitle from '../usePageTitle';
 
@@ -82,6 +83,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FeaturedDoctor className="pb-20" />
 
       {/* Specialities */}
       <section className="section bg-white">

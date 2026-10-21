@@ -4,6 +4,7 @@ import SectionHeading from '../components/SectionHeading';
 import Reveal from '../components/Reveal';
 import StatsBand from '../components/StatsBand';
 import CTASection from '../components/CTASection';
+import FeaturedDoctor from '../components/FeaturedDoctor';
 import { about, values, facilities } from '../data/site';
 import usePageTitle from '../usePageTitle';
 
@@ -36,6 +37,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <FeaturedDoctor className="pb-20" />
 
       <section className="section bg-white">
         <div className="container-x grid gap-6 lg:grid-cols-3">
